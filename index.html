@@ -1,11 +1,598 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet trandisciplinaire : BCI</title>
+    <title>Projet BCI - Fatigue & RSVP</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <script src="script.js"></script>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-container">
+            <a href="#accueil" class="nav-logo">BCI<span>Lab</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#projet">Le Projet</a></li>
+                <li><a href="#art">État de l'art</a></li>
+                <li><a href="#charges">Cahier des charges</a></li>
+                <li><a href="#equipe">Notre équipe</a></li>
+                <li><a href="#ressources">Ressources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="accueil">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Projet Transdisciplinaire</div>
+            <h1 class="hero-title">
+                Projet BCI
+            </h1>
+            <h1 class="hero-title">
+                Étude de l'impact de la fatigue dans une interface cerveau-ordinateur basée sur le paradigme RSVP
+            </h1>
+            <a href="#projet" class="hero-btn">Découvrir le projet</a>
+        </div>
+    </section>
+
+    <!-- LE PROJET -->
+    <section id="projet">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Le projet</span></h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Contexte EN HAUT, pleine largeur -->
+            <div class="projet-card fade-in" style="margin-bottom: 2rem;">
+                <div class="card-title">Contexte</div>
+                <div class="card-text">
+
+                    <!-- Bloc BCI centré -->
+                    <div class="contexte-bci-block">
+                        <div class="contexte-bci-badge">BCI</div>
+                        <p class="contexte-bci-desc">
+                            La <strong>Brain-Computer Interface (BCI)</strong>, ou interface cerveau-machine, est une
+                            technologie
+                            permettant une communication directe entre le cerveau humain et un système informatique.
+                            Elle repose sur l'acquisition et l'analyse des signaux cérébraux afin de traduire l'activité
+                            neuronale en commandes exploitables par une machine. Les BCI sont principalement utilisées
+                            dans les domaines médicaux pour aider les personnes atteintes de handicaps moteurs, mais
+                            aussi dans la robotique, les jeux vidéo et la réalité virtuelle.
+                        </p>
+                    </div>
+
+
+
+                    <!-- RCP et RSVP côte à côte -->
+                    <div class="contexte-paradigms">
+                        <div class="paradigm-block left">
+                            <div class="paradigm-badge rcp">RCP</div>
+                            <div class="paradigm-name">Rapid Serial Circular Presentation</div>
+                            <p class="paradigm-desc">
+                                Présentation circulaire rapide des stimuli autour d'un point central.
+                                Réduit certains mouvements oculaires et améliore potentiellement
+                                l'attention visuelle de l'utilisateur.
+                            </p>
+                        </div>
+
+                        <div class="paradigm-divider"></div>
+
+                        <div class="paradigm-block right">
+                            <div class="paradigm-badge rsvp">RSVP</div>
+                            <div class="paradigm-name">Rapid Serial Visual Presentation</div>
+                            <p class="paradigm-desc">
+                                Présentation rapide de stimuli visuels au même emplacement à l'écran.
+                                L'utilisateur se concentre sur une cible spécifique dans la séquence,
+                                utilisée pour la sélection de caractères ou d'images.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Paragraphe fatigue -->
+                    <div class="contexte-fatigue-block">
+                        <div class="fatigue-icon">⚠️</div>
+                        <p>
+                            L'utilisation prolongée de ces paradigmes peut entraîner différentes formes de
+                            <strong>fatigue visuelle et cognitive</strong>, diminuant les performances de l'utilisateur
+                            ainsi que la précision des systèmes BCI. Bien que la fatigue ait été étudiée dans
+                            plusieurs paradigmes BCI, <strong>le concept de fatigue dans le paradigme RSVP reste
+                                encore peu exploré</strong> dans la littérature scientifique actuelle — constituant
+                            ainsi
+                            un sujet de recherche important pour améliorer l'efficacité et le confort des interfaces
+                            cerveau-machine.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Objectifs EN BAS, pleine largeur -->
+            <div class="projet-card fade-in">
+                <div class="card-title">Objectifs du Projet</div>
+                <div class="card-text">
+                    <p style="margin-bottom:1rem">
+                        L'objectif est d’étudier l’ impact de la fatigue d'un système de communication basé sur le
+                        contrôle de la pensée : interface Cerveau-Ordinateur (BCI, Brain computer Interface), et très
+                        particulièrement pour ceux basés sur le paradigme RSVP.
+                    </p>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ÉTAT DE L'ART -->
+    <section id="art">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">État de l'art</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="art-list fade-in">
+                <div class="art-card">
+                    <div class="art-number">01</div>
+                    <div class="card-title">Définition de la fatigue</div>
+                    <p class="card-text">
+                        La Fatigue est un état de diminution temporaire des capacités physiques, mentales ou
+                        émotionnelles causé par un effort prolongé, un manque de repos ou une activité intensive. Elle
+                        se manifeste généralement par une sensation d’épuisement, une baisse de concentration, une
+                        diminution de l’attention et une réduction des performances. La fatigue peut être physique,
+                        mentale ou cognitive selon la nature de l’effort fourni.
+                    </p>
+                </div>
+                <div class="art-card">
+                    <div class="art-number">02</div>
+                    <div class="card-title">Fatigue en BCI</div>
+                    <p class="card-text">
+                        Dans le contexte des Brain-Computer Interface (BCI), la Fatigue peut être définie comme un état
+                        de diminution progressive des capacités cognitives et attentionnelles provoqué par l’utilisation
+                        prolongée d’un système BCI. Elle se traduit par une augmentation de la fatigue subjective, une
+                        altération des signaux cérébraux — notamment une augmentation de l’activité dans certaines
+                        bandes de fréquences comme l’alpha (8–12 Hz) — ainsi qu’une baisse potentielle des performances
+                        du système, par exemple une augmentation du nombre d’erreurs ou une diminution de l’efficacité
+                        de détection des stimuli.
+
+                    </p>
+                </div>
+                <div class="art-card">
+                    <div class="art-number">03</div>
+                    <div class="card-title">Méthodes d'évaluation de la fatigue</div>
+                    <div class="card-text">
+                        <p style="margin-bottom: 1.5rem; font-size:0.9rem; color:var(--text-dim); line-height:1.7">
+                            Dans le domaine des BCI, la fatigue peut être évaluée à travers plusieurs approches
+                            complémentaires permettant d'analyser l'état de l'utilisateur et l'impact de la tâche
+                            sur ses performances.
+                        </p>
+                        <div class="methodes-list">
+                            <div class="methode-item">
+                                <div class="methode-content">
+                                    <div class="methode-title">Mesures physiologiques</div>
+                                    <p class="methode-desc">
+                                        Analyse des signaux physiologiques tels que l'EEG, les mouvements oculaires
+                                        ou le rythme cardiaque. Ces indicateurs permettent de détecter les modifications
+                                        biologiques associées à l'apparition de la fatigue.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="methode-item">
+                                <div class="methode-content">
+                                    <div class="methode-title">Mesures comportementales</div>
+                                    <p class="methode-desc">
+                                        Évaluation à partir des performances de l'utilisateur : augmentation du temps
+                                        de réponse, du nombre d'erreurs ou diminution de la précision peuvent refléter
+                                        un état de fatigue croissant.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="methode-item">
+                                <div class="methode-content">
+                                    <div class="methode-title">Questionnaires subjectifs</div>
+                                    <p class="methode-desc">
+                                        Recueil du ressenti de l'utilisateur concernant son niveau de fatigue, son
+                                        effort
+                                        mental ou sa charge cognitive, via des échelles standardisées utilisées en
+                                        neurosciences et en ergonomie.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- NASA-TLX -->
+            <div class="nasa-container fade-in">
+                <div class="nasa-title">
+                    <span class="nasa-badge">NASA-TLX</span>
+                    <h3 style="font-size:1.1rem">Méthode retenue pour l'évaluation de la charge cognitive</h3>
+                </div>
+                <p class="card-text" style="margin-bottom:1.5rem">
+                    Le NASA Task Load Index est un questionnaire multidimensionnel développé par la NASA permettant
+                    d'évaluer la charge de travail perçue selon 6 dimensions :
+                </p>
+                <div class="nasa-dimensions">
+                    <div class="nasa-dim">
+                        <div class="nasa-dim-title"> Exigence mentale</div>
+                        <div class="nasa-dim-desc">Effort de réflexion, mémorisation, calcul requis</div>
+                    </div>
+                    <div class="nasa-dim">
+                        <div class="nasa-dim-title"> Exigence physique</div>
+                        <div class="nasa-dim-desc">Effort physique requis pour la tâche</div>
+                    </div>
+                    <div class="nasa-dim">
+                        <div class="nasa-dim-title">⏱ Exigence temporelle</div>
+                        <div class="nasa-dim-desc">Pression temporelle ressentie</div>
+                    </div>
+                    <div class="nasa-dim">
+                        <div class="nasa-dim-title"> Effort</div>
+                        <div class="nasa-dim-desc">Intensité de l'effort pour accomplir la tâche</div>
+                    </div>
+                    <div class="nasa-dim">
+                        <div class="nasa-dim-title"> Performance</div>
+                        <div class="nasa-dim-desc">Satisfaction vis-à-vis du niveau de réussite</div>
+                    </div>
+                    <div class="nasa-dim">
+                        <div class="nasa-dim-title"> Frustration</div>
+                        <div class="nasa-dim-desc">Niveau de stress, irritation, découragement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAHIER DES CHARGES -->
+    <section id="charges">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Cahier des charges</span></h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="charges-grid fade-in">
+                <!-- Besoins fonctionnels -->
+                <div class="charges-card">
+                    <div class="charges-card-header">
+                        <div class="charges-icon blue">⚙️</div>
+                        <div class="charges-card-title">Besoins fonctionnels</div>
+                    </div>
+                    <ul class="charges-list">
+                        <li>Afficher des stimuli visuels en mode RSVP (présentation séquentielle)</li>
+                        <li>Enregistrer les signaux EEG en temps réel lors des sessions</li>
+                        <li>Administrer le questionnaire NASA-TLX avant et après les sessions</li>
+                        <li>Détecter et classifier la composante P300 dans le signal EEG</li>
+                        <li>Comparer les performances selon le niveau de fatigue mesuré</li>
+                        <li>Générer des rapports d'analyse automatisés</li>
+                    </ul>
+                </div>
+
+                <!-- Besoins techniques -->
+                <div class="charges-card">
+                    <div class="charges-card-header">
+                        <div class="charges-icon purple">🔬</div>
+                        <div class="charges-card-title">Besoins techniques</div>
+                    </div>
+                    <ul class="charges-list">
+                        <li>Casque EEG avec au minimum 8 électrodes actives</li>
+                        <li>Fréquence d'échantillonnage ≥ 256 Hz pour acquisition EEG</li>
+                        <li>Logiciel de présentation des stimuli (ex: PsychoPy, OpenViBE)</li>
+                        <li>Pipeline de traitement du signal (filtrage, segmentation, classification)</li>
+                        <li>Environnement Python / MATLAB pour l'analyse des données</li>
+                        <li>Écran avec taux de rafraîchissement ≥ 60 Hz</li>
+                    </ul>
+                </div>
+
+                <!-- Contraintes -->
+                <div class="charges-card">
+                    <div class="charges-card-header">
+                        <div class="charges-icon orange">⚠️</div>
+                        <div class="charges-card-title">Contraintes</div>
+                    </div>
+                    <ul class="charges-list">
+                        <li><strong style="color:var(--text)">Budget :</strong> Utilisation du matériel disponible au
+                            laboratoire</li>
+                        <li><strong style="color:var(--text)">Temps :</strong> Projet sur un semestre académique</li>
+                        <li><strong style="color:var(--text)">Matériel :</strong> Casque EEG partagé entre plusieurs
+                            équipes</li>
+                        <li><strong style="color:var(--text)">Sujets :</strong> Recrutement limité à l'environnement
+                            universitaire</li>
+                        <li><strong style="color:var(--text)">Éthique :</strong> Respect des protocoles expérimentaux
+                            avec sujets humains</li>
+                    </ul>
+                </div>
+
+                <!-- Critères de validation -->
+                <div class="charges-card">
+                    <div class="charges-card-header">
+                        <div class="charges-icon green">✅</div>
+                        <div class="charges-card-title">Critères de validation</div>
+                    </div>
+                    <ul class="charges-list">
+                        <li>Détection correcte de la P300 sur au moins 80% des essais</li>
+                        <li>Corrélation significative entre score NASA-TLX et dégradation EEG</li>
+                        <li>Résultats reproductibles sur plusieurs sujets</li>
+                        <li>Documentation complète du protocole expérimental</li>
+                        <li>Rapport final validé par les tuteurs du projet</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bouton téléchargement PDF -->
+            <a href="#" class="download-btn">
+                <span>📄</span>
+                Télécharger le cahier des charges (PDF)
+            </a>
+        </div>
+    </section>
+
+    <!-- ÉQUIPE -->
+    <section id="equipe">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Notre Equipe</span></h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Étudiants -->
+            <div class="team-section-title fade-in">L'équipe étudiante</div>
+            <div class="team-grid fade-in">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="image/youssef.jpg" alt="Youssef BENMICHICHI">
+                    </div>
+                    <div class="team-name">Youssef BENMICHICHI</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="image/mathis.jpg" alt="Mathis CANARD">
+                    </div>
+                    <div class="team-name">Mathis CANARD</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="image/cheng.jpg" alt="Cheng CAO">
+                    </div>
+                    <div class="team-name">Cheng CAO</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="image/joaquim.jpg" alt="Joaquim DAUBAGNA-LEFEBVRE">
+                    </div>
+                    <div class="team-name">Joaquim DAUBAGNA-LEFEBVRE</div>
+                </div>
+            </div>
+
+
+            <!-- Tuteurs -->
+            <div class="team-section-title fade-in">Nos tuteurs</div>
+            <div class="tutors-grid fade-in">
+                <div class="tutor-card">
+                    <div class="tutor-info">
+                        <div class="tutor-name">Mme. Véronique LESPINET-NAJIB</div>
+                    </div>
+                </div>
+                <div class="tutor-card">
+                    <div class="tutor-info">
+                        <div class="tutor-name">Mr. Ricardo RONANGEVIN</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Établissement -->
+            <div class="school-card fade-in">
+                <div class="school-logo">🎓</div>
+                <div class="school-info">
+                    <div class="school-name">École Nationale Supérieure de la Cognitique</div>
+                    <p class="school-desc">
+                        Ce projet transdisciplinaire est réalisé dans le cadre de notre formation d'ingénieur à l'ENSC.
+                        Il mobilise des compétences en traitement du signal, neurosciences, informatique et
+                        psychologie cognitive, illustrant parfaitement l'approche transdisciplinaire de notre cursus.
+                    </p>
+                    <div class="school-tags">
+                        <span class="skill-tag">Traitement du signal</span>
+                        <span class="skill-tag">Neurosciences</span>
+                        <span class="skill-tag">Psychologie cognitive</span>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- RESSOURCES -->
+    <section id="ressources" style="background: var(--secondary);">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <span class="section-tag">06 — Ressources</span>
+                <h2 class="section-title">Nos <span class="highlight">livrables</span></h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="ressources-grid fade-in">
+                <!-- Documents -->
+                <div class="card">
+                    <div class="card-icon">📁</div>
+                    <div class="card-title">Documents & Rapports</div>
+                    <div class="ressource-list">
+                        <a href="#" class="ressource-item">
+                            <div class="ressource-icon">📄</div>
+                            <div class="ressource-info">
+                                <div class="ressource-name">Rapport intermédiaire</div>
+                                <div class="ressource-meta">PDF · 2.4 Mo · Octobre 2024</div>
+                            </div>
+                            <div class="ressource-dl">↓</div>
+                        </a>
+                        <a href="#" class="ressource-item">
+                            <div class="ressource-icon">📊</div>
+                            <div class="ressource-info">
+                                <div class="ressource-name">Présentation mi-parcours</div>
+                                <div class="ressource-meta">PPTX · 8.1 Mo · Novembre 2024</div>
+                            </div>
+                            <div class="ressource-dl">↓</div>
+                        </a>
+                        <a href="#" class="ressource-item">
+                            <div class="ressource-icon">📋</div>
+                            <div class="ressource-info">
+                                <div class="ressource-name">Cahier des charges</div>
+                                <div class="ressource-meta">PDF · 1.1 Mo · Septembre 2024</div>
+                            </div>
+                            <div class="ressource-dl">↓</div>
+                        </a>
+                        <a href="#" class="ressource-item coming-soon">
+                            <div class="ressource-icon">📝</div>
+                            <div class="ressource-info">
+                                <div class="ressource-name">Rapport final</div>
+                                <div class="ressource-meta">À venir — Janvier 2025</div>
+                            </div>
+                            <div class="ressource-dl" style="color:var(--text-dim); font-size:0.75rem">bientôt</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vidéos -->
+                <div class="card">
+                    <div class="card-icon">🎬</div>
+                    <div class="card-title">Vidéos de démonstration</div>
+                    <div class="video-placeholder">
+                        <div class="video-icon">▶</div>
+                        <div class="video-text">Démonstration du paradigme RSVP</div>
+                        <div class="video-subtext">Vidéo disponible prochainement</div>
+                    </div>
+                    <div class="video-placeholder" style="margin-top:1rem">
+                        <div class="video-icon">▶</div>
+                        <div class="video-text">Session d'acquisition EEG</div>
+                        <div class="video-subtext">Vidéo disponible prochainement</div>
+                    </div>
+                </div>
+
+                <!-- Articles -->
+                <div class="card">
+                    <div class="card-icon">🔗</div>
+                    <div class="card-title">Articles & Liens utiles</div>
+                    <div class="links-list">
+                        <a href="https://openbci.com" target="_blank" class="link-item">
+                            <span class="link-dot"></span>
+                            <div>
+                                <div class="link-name">OpenBCI</div>
+                                <div class="link-desc">Plateforme open-source pour BCI</div>
+                            </div>
+                        </a>
+                        <a href="https://www.fieldtriptoolbox.org" target="_blank" class="link-item">
+                            <span class="link-dot"></span>
+                            <div>
+                                <div class="link-name">FieldTrip Toolbox</div>
+                                <div class="link-desc">Analyse EEG/MEG avancée</div>
+                            </div>
+                        </a>
+                        <a href="https://mne.tools" target="_blank" class="link-item">
+                            <span class="link-dot"></span>
+                            <div>
+                                <div class="link-name">MNE-Python</div>
+                                <div class="link-desc">Traitement signal EEG en Python</div>
+                            </div>
+                        </a>
+                        <a href="https://www.psychopy.org" target="_blank" class="link-item">
+                            <span class="link-dot"></span>
+                            <div>
+                                <div class="link-name">PsychoPy</div>
+                                <div class="link-desc">Présentation stimuli RSVP</div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-item">
+                            <span class="link-dot"></span>
+                            <div>
+                                <div class="link-name">NASA-TLX — Hart & Staveland (1988)</div>
+                                <div class="link-desc">Article original du questionnaire</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galerie photos -->
+            <div class="fade-in" style="margin-top:3rem">
+                <div class="team-section-title">Galerie du projet</div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">🎧</div>
+                        <div class="gallery-label">Session EEG</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">💻</div>
+                        <div class="gallery-label">Interface RSVP</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">📊</div>
+                        <div class="gallery-label">Analyse des données</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">🤝</div>
+                        <div class="gallery-label">Réunion d'équipe</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">🧪</div>
+                        <div class="gallery-label">Protocole expérimental</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">📝</div>
+                        <div class="gallery-label">Questionnaire NASA-TLX</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Nous contacter</span></h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="contact-list fade-in">
+                <!-- Infos contact -->
+                <div class="contact-info">
+                    <div class="card" style="margin-bottom:1.5rem">
+                        <div class="card-title" style="margin-bottom:1.5rem">📬 Informations de contact</div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <div class="contact-label">Email du responable communication du projet</div>
+                                <div class="contact-value">mcanard001@ensc.fr</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-text">
+            © 2024 — Projet BCI <span>|</span> Fatigue & Paradigme RSVP <span>|</span> Projet Transdisciplinaire
+        </div>
+        <div style="margin-top:0.5rem; color:var(--text-dim); font-size:0.8rem;">
+            Réalisé avec ❤️ par l'équipe BCI
+        </div>
+    </footer>
+
 </body>
+
 </html>
