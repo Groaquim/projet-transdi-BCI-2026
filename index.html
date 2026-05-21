@@ -14,7 +14,7 @@
     <!-- NAVBAR -->
     <nav>
         <div class="nav-container">
-            <a href="#accueil" class="nav-logo">BCI<span>Lab</span></a>
+            <a href="#accueil" class="nav-logo"><span>BCILab</span></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#projet">Le Projet</a></li>
@@ -36,15 +36,15 @@
         <div class="hero-grid"></div>
         <div class="hero-content">
             <div class="hero-badge">Projet Transdisciplinaire</div>
-            <h1 class="hero-title">
-                Projet BCI
-            </h1>
-            <h1 class="hero-title">
+            <h1 class="hero-title">Projet BCI</h1>
+            <h2 class="hero-subtitle">
                 Étude de l'impact de la fatigue dans une interface cerveau-ordinateur basée sur le paradigme RSVP
-            </h1>
+            </h2>
             <a href="#projet" class="hero-btn">Découvrir le projet</a>
         </div>
     </section>
+    
+    
 
     <!-- LE PROJET -->
     <section id="projet">
@@ -79,11 +79,12 @@
                     <div class="contexte-paradigms">
                         <div class="paradigm-block left">
                             <div class="paradigm-badge rcp">RCP</div>
-                            <div class="paradigm-name">Rapid Serial Circular Presentation</div>
+                            <div class="paradigm-name">Row-Column Paradigm</div>
                             <p class="paradigm-desc">
-                                Présentation circulaire rapide des stimuli autour d'un point central.
-                                Réduit certains mouvements oculaires et améliore potentiellement
-                                l'attention visuelle de l'utilisateur.
+                                Le RCP (Row-Column Paradigm) en BCI utilise une grille de symboles où les lignes et
+                                colonnes clignotent successivement. L’utilisateur se concentre sur une lettre cible, et
+                                la détection du potentiel P300 lors du flash de sa ligne et de sa colonne permet de
+                                l’identifier.
                             </p>
                         </div>
 
@@ -93,9 +94,10 @@
                             <div class="paradigm-badge rsvp">RSVP</div>
                             <div class="paradigm-name">Rapid Serial Visual Presentation</div>
                             <p class="paradigm-desc">
-                                Présentation rapide de stimuli visuels au même emplacement à l'écran.
-                                L'utilisateur se concentre sur une cible spécifique dans la séquence,
-                                utilisée pour la sélection de caractères ou d'images.
+                                Le RSVP (Rapid Serial Visual Presentation) présente les symboles un par un au même
+                                endroit et très rapidement. L’utilisateur repère la cible dans cette séquence, et sa
+                                présence déclenche aussi un P300, ce qui permet de la reconnaître sans utiliser de
+                                grille spatiale.
                             </p>
                         </div>
                     </div>
@@ -146,8 +148,7 @@
 
             <div class="art-list fade-in">
                 <div class="art-card">
-                    <div class="art-number">01</div>
-                    <div class="card-title">Définition de la fatigue</div>
+                    <div class="art-number">Définition de la fatigue</div>
                     <p class="card-text">
                         La Fatigue est un état de diminution temporaire des capacités physiques, mentales ou
                         émotionnelles causé par un effort prolongé, un manque de repos ou une activité intensive. Elle
@@ -157,8 +158,7 @@
                     </p>
                 </div>
                 <div class="art-card">
-                    <div class="art-number">02</div>
-                    <div class="card-title">Fatigue en BCI</div>
+                    <div class="art-number">Fatigue en BCI</div>
                     <p class="card-text">
                         Dans le contexte des Brain-Computer Interface (BCI), la Fatigue peut être définie comme un état
                         de diminution progressive des capacités cognitives et attentionnelles provoqué par l’utilisation
@@ -171,8 +171,7 @@
                     </p>
                 </div>
                 <div class="art-card">
-                    <div class="art-number">03</div>
-                    <div class="card-title">Méthodes d'évaluation de la fatigue</div>
+                    <div class="art-number">Méthodes d'évaluation de la fatigue</div>
                     <div class="card-text">
                         <p style="margin-bottom: 1.5rem; font-size:0.9rem; color:var(--text-dim); line-height:1.7">
                             Dans le domaine des BCI, la fatigue peut être évaluée à travers plusieurs approches
@@ -222,7 +221,7 @@
             <div class="nasa-container fade-in">
                 <div class="nasa-title">
                     <span class="nasa-badge">NASA-TLX</span>
-                    <h3 style="font-size:1.1rem">Méthode retenue pour l'évaluation de la charge cognitive</h3>
+                    <h3 style="font-size:2rem">Méthode retenue pour l'évaluation de la charge cognitive</h3>
                 </div>
                 <p class="card-text" style="margin-bottom:1.5rem">
                     Le NASA Task Load Index est un questionnaire multidimensionnel développé par la NASA permettant
@@ -238,7 +237,7 @@
                         <div class="nasa-dim-desc">Effort physique requis pour la tâche</div>
                     </div>
                     <div class="nasa-dim">
-                        <div class="nasa-dim-title">⏱ Exigence temporelle</div>
+                        <div class="nasa-dim-title">Exigence temporelle</div>
                         <div class="nasa-dim-desc">Pression temporelle ressentie</div>
                     </div>
                     <div class="nasa-dim">
@@ -413,14 +412,40 @@
                 </div>
             </div>
 
+            <!-- Séparateur -->
+            <div class="school-divider fade-in">
+                <div class="school-divider-line"></div>
+                <span class="school-divider-text">en partenariat avec</span>
+                <div class="school-divider-line"></div>
+            </div>
+
+            <!-- Université de Malaga -->
+            <div class="school-card fade-in">
+                <div class="school-logo">🏛️</div>
+                <div class="school-info">
+                    <div class="school-name">Universidad de Málaga</div>
+                    <p class="school-desc">
+                        Ce projet est également mené en collaboration avec l'Université de Málaga,
+                        qui apporte son expertise en ingénierie biomédicale et en interfaces
+                        cerveau-ordinateur, renforçant ainsi la dimension internationale
+                        et interdisciplinaire de notre démarche de recherche.
+                    </p>
+                    <div class="school-tags">
+                        <span class="skill-tag">Ingénierie biomédicale</span>
+                        <span class="skill-tag">BCI Research</span>
+                        <span class="skill-tag">Collaboration internationale</span>
+                    </div>
+                </div>
+            </div>
+
+
     </section>
 
     <!-- RESSOURCES -->
     <section id="ressources" style="background: var(--secondary);">
         <div class="section-container">
             <div class="section-header fade-in">
-                <span class="section-tag">06 — Ressources</span>
-                <h2 class="section-title">Nos <span class="highlight">livrables</span></h2>
+                <h2 class="section-title">Nos livrables</span></h2>
                 <div class="divider"></div>
             </div>
 
@@ -586,7 +611,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-text">
-            © 2024 — Projet BCI <span>|</span> Fatigue & Paradigme RSVP <span>|</span> Projet Transdisciplinaire
+            © 2025-2026 — Projet BCI <span>|</span> Fatigue & Paradigme RSVP <span>|</span> Projet Transdisciplinaire
         </div>
         <div style="margin-top:0.5rem; color:var(--text-dim); font-size:0.8rem;">
             Réalisé avec ❤️ par l'équipe BCI
