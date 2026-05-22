@@ -14,7 +14,10 @@
     <!-- NAVBAR -->
     <nav>
         <div class="nav-container">
-            <a href="#accueil" class="nav-logo"><span>BCILab</span></a>
+            <a href="#accueil" class="nav-logo">
+                <img src="assets/logo-ensc.jpg" alt="Logo ENSC" class="nav-logo-img">
+                <span>BCILab</span>
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#projet">Le Projet</a></li>
@@ -43,8 +46,8 @@
             <a href="#projet" class="hero-btn">Découvrir le projet</a>
         </div>
     </section>
-    
-    
+
+
 
     <!-- LE PROJET -->
     <section id="projet">
@@ -227,6 +230,15 @@
                     Le NASA Task Load Index est un questionnaire multidimensionnel développé par la NASA permettant
                     d'évaluer la charge de travail perçue selon 6 dimensions :
                 </p>
+                <!-- DEUX IMAGES NASA-TLX -->
+                <div class="nasa-images-wrapper">
+                    <div class="nasa-image-card">
+                        <img src="NASA_TLX/1.jpg" alt="NASA-TLX Test 1">
+                    </div>
+                    <div class="nasa-image-card">
+                        <img src="NASA_TLX/2.jpg" alt="NASA-TLX Test 2">
+                    </div>
+                </div>
                 <div class="nasa-dimensions">
                     <div class="nasa-dim">
                         <div class="nasa-dim-title"> Exigence mentale</div>
@@ -258,88 +270,142 @@
     </section>
 
     <!-- CAHIER DES CHARGES -->
-    <section id="charges">
+    <section id="charges" aria-labelledby="charges-title">
         <div class="section-container">
-            <div class="section-header fade-in">
-                <h2 class="section-title">Cahier des charges</span></h2>
-                <div class="divider"></div>
-            </div>
 
-            <div class="charges-grid fade-in">
+            <header class="section-header fade-in">
+                <h2 id="charges-title" class="section-title">Cahier des charges</h2>
+                <div class="divider" role="presentation"></div>
+            </header>
+
+            <div class="charges-grid fade-in" role="list">
+
                 <!-- Besoins fonctionnels -->
-                <div class="charges-card">
-                    <div class="charges-card-header">
-                        <div class="charges-icon blue">⚙️</div>
-                        <div class="charges-card-title">Besoins fonctionnels</div>
-                    </div>
+                <article class="charges-card" role="listitem">
+                    <header class="charges-card-header">
+                        <span class="charges-icon charges-icon--blue" aria-hidden="true">🧠</span>
+                        <h3 class="charges-card-title">Besoins fonctionnels</h3>
+                    </header>
                     <ul class="charges-list">
-                        <li>Afficher des stimuli visuels en mode RSVP (présentation séquentielle)</li>
-                        <li>Enregistrer les signaux EEG en temps réel lors des sessions</li>
-                        <li>Administrer le questionnaire NASA-TLX avant et après les sessions</li>
-                        <li>Détecter et classifier la composante P300 dans le signal EEG</li>
-                        <li>Comparer les performances selon le niveau de fatigue mesuré</li>
-                        <li>Générer des rapports d'analyse automatisés</li>
+                        <li>Élaborer un protocole expérimental rigoureux pour mesurer l'effet de la fatigue (BCI en
+                            RSVP)</li>
+                        <li>Réaliser des expérimentations sur un panel de participants </li>
+                        <li>Assurer la collecte, le stockage et l'exploitation des données EEG et questionnaires</li>
+                        <li>Garantir la fiabilité et la cohérence des données recueillies</li>
+                        <li>Mettre en place une anonymisation des données</li>
+                        <li>Produire une analyse scientifique des résultats</li>
+                        <li>
+                            Générer des livrables exploitables :
+                            Article scientifique,
+                            Tableaux de résultats,
+                            Données brutes,
+                            Site web de présentation
+                        </li>
                     </ul>
-                </div>
+                </article>
 
                 <!-- Besoins techniques -->
-                <div class="charges-card">
-                    <div class="charges-card-header">
-                        <div class="charges-icon purple">🔬</div>
-                        <div class="charges-card-title">Besoins techniques</div>
-                    </div>
+                <article class="charges-card" role="listitem">
+                    <header class="charges-card-header">
+                        <span class="charges-icon charges-icon--purple" aria-hidden="true">⚙️</span>
+                        <h3 class="charges-card-title">Besoins techniques</h3>
+                    </header>
                     <ul class="charges-list">
-                        <li>Casque EEG avec au minimum 8 électrodes actives</li>
-                        <li>Fréquence d'échantillonnage ≥ 256 Hz pour acquisition EEG</li>
-                        <li>Logiciel de présentation des stimuli (ex: PsychoPy, OpenViBE)</li>
-                        <li>Pipeline de traitement du signal (filtrage, segmentation, classification)</li>
-                        <li>Environnement Python / MATLAB pour l'analyse des données</li>
-                        <li>Écran avec taux de rafraîchissement ≥ 60 Hz</li>
+                        <li>Utilisation d'un système BCI complet (EEG + logiciel UMA BCI)
+                        <li>
+                            Environnement expérimental contrôlé :
+
+                            Salle dédiée,
+                            Conditions stables (bruit, température, luminosité)
+
+                        </li>
+                        <li>Détection et exploitation du signal P300</li>
+                        <li>Outils de traitement et d'analyse des données EEG</li>
+                        <li>Mise en place de questionnaires cognitifs et physiologiques</li>
+                        <li>Formation préalable à l'utilisation du système BCI</li>
+                        <li>Organisation des données sous forme de tableaux exploitables</li>
                     </ul>
-                </div>
+                </article>
 
                 <!-- Contraintes -->
-                <div class="charges-card">
-                    <div class="charges-card-header">
-                        <div class="charges-icon orange">⚠️</div>
-                        <div class="charges-card-title">Contraintes</div>
-                    </div>
+                <article class="charges-card" role="listitem">
+                    <header class="charges-card-header">
+                        <span class="charges-icon charges-icon--orange" aria-hidden="true">⚠️</span>
+                        <h3 class="charges-card-title">Contraintes</h3>
+                    </header>
                     <ul class="charges-list">
-                        <li><strong style="color:var(--text)">Budget :</strong> Utilisation du matériel disponible au
-                            laboratoire</li>
-                        <li><strong style="color:var(--text)">Temps :</strong> Projet sur un semestre académique</li>
-                        <li><strong style="color:var(--text)">Matériel :</strong> Casque EEG partagé entre plusieurs
-                            équipes</li>
-                        <li><strong style="color:var(--text)">Sujets :</strong> Recrutement limité à l'environnement
-                            universitaire</li>
-                        <li><strong style="color:var(--text)">Éthique :</strong> Respect des protocoles expérimentaux
-                            avec sujets humains</li>
+                        <li>Disponibilité limitée du matériel EEG (partagé)</li>
+                        <li>Contraintes liées au logiciel UMA BCI</li>
+                        <li>Accès restreint à une salle d'expérimentation dédiée</li>
+                        <li>Nombre suffisant de participants à recruter</li>
+                        <li>Respect de conditions expérimentales strictes</li>
+                        <li>Sensibilité du signal P300 (bruit, fatigue, environnement)</li>
+                        <li>
+                            Délais imposés :
+                            <ul class="charges-list charges-list--nested">
+                                <li><time datetime="2025-09-23">Début : 23 septembre 2025</time></li>
+                                <li><time datetime="2026-05-22">Soutenance : 22 mai 2026</time></li>
+                                <li><time datetime="2026-05-26">Rendu final : 26 mai 2026</time></li>
+                            </ul>
+                        </li>
+                        <li>Aucun budget supplémentaire (matériel imposé)</li>
                     </ul>
-                </div>
+                </article>
 
                 <!-- Critères de validation -->
-                <div class="charges-card">
-                    <div class="charges-card-header">
-                        <div class="charges-icon green">✅</div>
-                        <div class="charges-card-title">Critères de validation</div>
-                    </div>
+                <article class="charges-card" role="listitem">
+                    <header class="charges-card-header">
+                        <span class="charges-icon charges-icon--green" aria-hidden="true">✅</span>
+                        <h3 class="charges-card-title">Critères de validation</h3>
+                    </header>
                     <ul class="charges-list">
-                        <li>Détection correcte de la P300 sur au moins 80% des essais</li>
-                        <li>Corrélation significative entre score NASA-TLX et dégradation EEG</li>
-                        <li>Résultats reproductibles sur plusieurs sujets</li>
-                        <li>Documentation complète du protocole expérimental</li>
-                        <li>Rapport final validé par les tuteurs du projet</li>
+                        <li>
+                            Protocole expérimental :
+                            <ul class="charges-list charges-list--nested">
+                                <li>Clair</li>
+                                <li>Reproductible</li>
+                                <li>Validé par les encadrants</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Données :
+                            <ul class="charges-list charges-list--nested">
+                                <li>Complètes</li>
+                                <li>Fiables</li>
+                                <li>Exploitables scientifiquement</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Analyse :
+                            <ul class="charges-list charges-list--nested">
+                                <li>Pertinente</li>
+                                <li>Rigoureuse</li>
+                                <li>Cohérente avec les objectifs</li>
+                            </ul>
+                        </li>
+                        <li>Résultats permettant de conclure sur l'effet de la fatigue</li>
+                        <li>
+                            Livrables conformes :
+                            <ul class="charges-list charges-list--nested">
+                                <li>Article scientifique complet</li>
+                                <li>Tableaux de données</li>
+                                <li>Site web fonctionnel</li>
+                            </ul>
+                        </li>
+                        <li>Respect des délais et des exigences des encadrants</li>
                     </ul>
-                </div>
-            </div>
+                </article>
 
-            <!-- Bouton téléchargement PDF -->
-            <a href="#" class="download-btn">
-                <span>📄</span>
-                Télécharger le cahier des charges (PDF)
-            </a>
+            </div>
         </div>
+        <!-- Bouton téléchargement PDF -->
+        <a href="assets/Cahier-des-charges.pdf" class="download-btn" download="Cahier-des-charges.pdf" target="_blank"
+            rel="noopener noreferrer" aria-label="Télécharger le cahier des charges au format PDF">
+            <span aria-hidden="true">📄</span>
+            Télécharger le cahier des charges (PDF)
+        </a>
     </section>
+
 
     <!-- ÉQUIPE -->
     <section id="equipe">
@@ -413,10 +479,10 @@
             </div>
 
             <!-- Séparateur -->
-            <div class="school-divider fade-in">
+            <div class="team-section-title fade-in">
                 <div class="school-divider-line"></div>
                 <span class="school-divider-text">en partenariat avec</span>
-                <div class="school-divider-line"></div>
+                <div class="team-section-title fade-in"></div>
             </div>
 
             <!-- Université de Malaga -->
@@ -449,47 +515,7 @@
                 <div class="divider"></div>
             </div>
 
-            <div class="ressources-grid fade-in">
-                <!-- Documents -->
-                <div class="card">
-                    <div class="card-icon">📁</div>
-                    <div class="card-title">Documents & Rapports</div>
-                    <div class="ressource-list">
-                        <a href="#" class="ressource-item">
-                            <div class="ressource-icon">📄</div>
-                            <div class="ressource-info">
-                                <div class="ressource-name">Rapport intermédiaire</div>
-                                <div class="ressource-meta">PDF · 2.4 Mo · Octobre 2024</div>
-                            </div>
-                            <div class="ressource-dl">↓</div>
-                        </a>
-                        <a href="#" class="ressource-item">
-                            <div class="ressource-icon">📊</div>
-                            <div class="ressource-info">
-                                <div class="ressource-name">Présentation mi-parcours</div>
-                                <div class="ressource-meta">PPTX · 8.1 Mo · Novembre 2024</div>
-                            </div>
-                            <div class="ressource-dl">↓</div>
-                        </a>
-                        <a href="#" class="ressource-item">
-                            <div class="ressource-icon">📋</div>
-                            <div class="ressource-info">
-                                <div class="ressource-name">Cahier des charges</div>
-                                <div class="ressource-meta">PDF · 1.1 Mo · Septembre 2024</div>
-                            </div>
-                            <div class="ressource-dl">↓</div>
-                        </a>
-                        <a href="#" class="ressource-item coming-soon">
-                            <div class="ressource-icon">📝</div>
-                            <div class="ressource-info">
-                                <div class="ressource-name">Rapport final</div>
-                                <div class="ressource-meta">À venir — Janvier 2025</div>
-                            </div>
-                            <div class="ressource-dl" style="color:var(--text-dim); font-size:0.75rem">bientôt</div>
-                        </a>
-                    </div>
-                </div>
-
+            <div class="ressources-list fade-in">
                 <!-- Vidéos -->
                 <div class="card">
                     <div class="card-icon">🎬</div>
@@ -505,84 +531,20 @@
                         <div class="video-subtext">Vidéo disponible prochainement</div>
                     </div>
                 </div>
-
-                <!-- Articles -->
-                <div class="card">
-                    <div class="card-icon">🔗</div>
-                    <div class="card-title">Articles & Liens utiles</div>
-                    <div class="links-list">
-                        <a href="https://openbci.com" target="_blank" class="link-item">
-                            <span class="link-dot"></span>
-                            <div>
-                                <div class="link-name">OpenBCI</div>
-                                <div class="link-desc">Plateforme open-source pour BCI</div>
-                            </div>
-                        </a>
-                        <a href="https://www.fieldtriptoolbox.org" target="_blank" class="link-item">
-                            <span class="link-dot"></span>
-                            <div>
-                                <div class="link-name">FieldTrip Toolbox</div>
-                                <div class="link-desc">Analyse EEG/MEG avancée</div>
-                            </div>
-                        </a>
-                        <a href="https://mne.tools" target="_blank" class="link-item">
-                            <span class="link-dot"></span>
-                            <div>
-                                <div class="link-name">MNE-Python</div>
-                                <div class="link-desc">Traitement signal EEG en Python</div>
-                            </div>
-                        </a>
-                        <a href="https://www.psychopy.org" target="_blank" class="link-item">
-                            <span class="link-dot"></span>
-                            <div>
-                                <div class="link-name">PsychoPy</div>
-                                <div class="link-desc">Présentation stimuli RSVP</div>
-                            </div>
-                        </a>
-                        <a href="#" class="link-item">
-                            <span class="link-dot"></span>
-                            <div>
-                                <div class="link-name">NASA-TLX — Hart & Staveland (1988)</div>
-                                <div class="link-desc">Article original du questionnaire</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
             </div>
-
-            <!-- Galerie photos -->
-            <div class="fade-in" style="margin-top:3rem">
-                <div class="team-section-title">Galerie du projet</div>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder">🎧</div>
-                        <div class="gallery-label">Session EEG</div>
+            <!-- Documents -->
+            <div class="card">
+                <div class="card-icon">📁</div>
+                <div class="card-title">Documents & Rapports</div>
+                <a href="assets/projet-drive.zip" class="ressource-item" download>
+                    <div class="ressource-icon">🗜️</div>
+                    <div class="ressource-info">
+                        <div class="ressource-name">Archive complète</div>
                     </div>
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder">💻</div>
-                        <div class="gallery-label">Interface RSVP</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder">📊</div>
-                        <div class="gallery-label">Analyse des données</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder">🤝</div>
-                        <div class="gallery-label">Réunion d'équipe</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder">🧪</div>
-                        <div class="gallery-label">Protocole expérimental</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="gallery-placeholder">📝</div>
-                        <div class="gallery-label">Questionnaire NASA-TLX</div>
-                    </div>
-                </div>
+                    <div class="ressource-dl">↓</div>
+                </a>
             </div>
-        </div>
     </section>
-
     <!-- CONTACT -->
     <section id="contact">
         <div class="section-container">

@@ -54,7 +54,18 @@ nav {
     color: var(--accent);
     text-decoration: none;
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
+
+.nav-logo-img {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* rend le logo blanc */
+}
+
 
 .nav-logo span {
     color: var(--accent2);
@@ -1695,7 +1706,7 @@ textarea.form-input {
 .contexte-bci-badge {
     display: inline-block;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
-    color: #0a0e1a;
+    color: white;
     font-weight: 800;
     font-size: 1.4rem;
     padding: 0.5rem 2rem;
@@ -1864,5 +1875,54 @@ textarea.form-input {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.nasa-images-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    align-items: flex-start;
+}
+
+.nasa-image-card {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.nasa-image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.nasa-image-label {
+    text-align: center;
+    padding: 0.7rem;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .nasa-images-wrapper {
+        flex-direction: column;
+    }
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.nav-logo-img {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
 }
 
