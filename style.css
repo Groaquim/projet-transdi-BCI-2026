@@ -77,17 +77,24 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: white !important;
     text-decoration: none;
     padding: 0.5rem 0.9rem;
     border-radius: 6px;
     font-size: 0.9rem;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--accent);
     background: rgba(0, 212, 255, 0.08);
+}
+
+.nav-links a.active {
+    background: #c0392b;
+}
+
+.nav-links a.active:hover {
+    background: #63121b;
 }
 
 .hamburger {

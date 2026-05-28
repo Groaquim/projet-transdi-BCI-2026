@@ -25,18 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    const sections = document.querySelectorAll('section[id]');
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
     window.addEventListener('scroll', () => {
         let current = '';
+        
         sections.forEach(section => {
-            if (window.scrollY >= section.offsetTop - 100) {
+            if (window.scrollY >= section.offsetTop - 150) {
                 current = section.getAttribute('id');
             }
         });
-        document.querySelectorAll('.nav-links a').forEach(a => {
-            a.style.color = a.getAttribute('href') === '#' + current
-                ? 'var(--accent)' : '';
+
+        navLinks.forEach(a => {
+            a.classList.remove('active');
+            if (a.getAttribute('href') === '#' + current) {
+                a.classList.add('active');
+            }
         });
     });
 });
-
