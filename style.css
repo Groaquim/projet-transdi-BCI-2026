@@ -2254,3 +2254,7 @@ textarea.form-input {
     object-fit: cover;
     display: block;
 }
+
+.charges-card .art-number {
+    margin-bottom: 1rem;
+}
