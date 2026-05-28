@@ -15,7 +15,6 @@
     --border: rgba(139, 26, 46, 0.15);
 }
 
-
 html {
     scroll-behavior: smooth;
 }
@@ -43,7 +42,8 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2rem;
     align-items: center;
     height: 65px;
 }
@@ -66,7 +66,6 @@ nav {
     filter: brightness(0) invert(1); /* rend le logo blanc */
 }
 
-
 .nav-logo span {
     color: var(--accent2);
 }
@@ -74,7 +73,7 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 0.3rem;
+    gap: 2rem;
 }
 
 .nav-links a {
@@ -157,7 +156,7 @@ nav {
 
 .hero-title {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 800;
+    font-weight: 700;
     color: var(--accent);
     line-height: 1.1;
     margin-bottom: 0.8rem;
@@ -169,15 +168,13 @@ nav {
     color: var(--text-dim);
     line-height: 1.6;
     margin-bottom: 2rem;
-    max-width: 620px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-
-
 
 .hero-btn {
     display: inline-block;
@@ -352,7 +349,7 @@ section {
     font-family: monospace;
 }
 
-/* Schema BCI */
+/* Schéma BCI */
 .schema-container {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -1836,7 +1833,6 @@ footer {
 }
 
 /* ===== CONTACT ===== */
-
 #contact {
     background: var(--secondary);
 }
@@ -1944,7 +1940,7 @@ textarea.form-input {
     transform: translateY(-2px);
 }
 
-/* ===== CONTEXTE BLOCK ===== */
+/* ===== BLOC CONTEXTE ===== */
 .contexte-bci-block {
     display: flex;
     flex-direction: column;
