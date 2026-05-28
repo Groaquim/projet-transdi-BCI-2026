@@ -45,11 +45,11 @@ nav {
 
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.2rem;
     align-items: center;
     height: 65px;
 }
@@ -87,15 +87,23 @@ nav {
 }
 
 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
 .nav-links a {
     color: white !important;
     text-decoration: none;
-    padding: 0.5rem 0.9rem;
+    padding: 0.5rem 0.65rem;
     border-radius: 6px;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
-
 
 .nav-links a:hover {
     background: rgba(0, 212, 255, 0.08);
@@ -1117,9 +1125,75 @@ section {
 }
 
 
+/* ===== Résultats ===== */
+
+
+#resultats {
+    background: var(--primary);
+}
+
+.resultats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.resultat-card {
+    padding: 1.5rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resultat-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(80, 160, 255, 0.45);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+.resultat-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #8b1a2e;
+    margin-bottom: 0.8rem;
+}
+
+.resultat-label {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .resultats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.resultats-image-card {
+    margin: 2rem auto;
+    padding: 1.2rem;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    max-width: 600px;
+    text-align: center;
+}
+
+.resultats-image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
 /* ===== RESSOURCES ===== */
 #ressources {
-    background: var(--primary);
+    background: var(--secondary);
 }
 
 
@@ -2166,7 +2240,7 @@ footer {
 
 /* ===== CONTACT ===== */
 #contact {
-    background: var(--secondary);
+    background: var(--primary);
 }
 
 
@@ -2696,3 +2770,4 @@ textarea.form-input {
     width: auto;
     margin-top: 0.5rem;
 }
+

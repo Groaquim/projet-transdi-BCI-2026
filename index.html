@@ -27,6 +27,7 @@
                 <li><a href="#charges">Cahier des charges</a></li>
                 <li><a href="#equipe">Équipe</a></li>
                 <li><a href="#protocole">Protocole</a></li>
+                <li><a href="#resultats">Résultats</a></li>
                 <li><a href="#ressources">Livrables</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -630,9 +631,8 @@
                 <div class="protocole-title">Méthodologie générale</div>
                 <div class="protocole-text">
                     <p>
-                        L'étude est menée auprès d'un groupe de <strong>16 participants volontaires</strong>. Les
-                        signaux
-                        EEG sont enregistrés à l'aide d'un casque EEG associé au logiciel <strong>UMA BCI</strong>.
+                        L'étude est menée auprès d'un groupe de <strong>15 participants volontaires</strong>. Cependant, les résultats n'ont été exploitables que pour 7 passations, les autres s'étant avérées infructueuses pour de multiples raisons. 
+                        Les signaux EEG sont enregistrés à l'aide d'un casque EEG associé au logiciel <strong>UMA BCI</strong>.
                         Les <em>stimuli</em> RSVP consistent en un flux de lettres et de chiffres présentés rapidement à
                         l'écran.
                     </p>
@@ -804,6 +804,152 @@
     </section>
 
 
+<!-- RÉSULTATS -->
+<section id="resultats">
+    <div class="section-container">
+        <div class="section-header fade-in">
+            <h2 class="section-title">Résultats</h2>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Contexte des mesures -->
+        <div class="art-card fade-in" style="margin-bottom:2rem;">
+            <div class="art-number" style="font-size:1.4rem;">Contexte des mesures</div>
+            <p class="card-text">
+                Les participants ont été soumis à trois questionnaires au cours de l'expérience. Le premier questionnaire,
+                nommé <strong>Pré Test</strong>, est rempli au tout début de l'expérience afin d'évaluer l'état initial du participant.
+                Le deuxième questionnaire, nommé <strong>Test 1</strong>, est complété après la première phase d'écriture.
+                Enfin, le troisième questionnaire, nommé <strong>Test 2</strong>, est rempli à la fin de l'expérience,
+                après la seconde phase d'écriture.
+            </p>
+        </div>
+
+        <!-- Analyse statistique -->
+        <div class="art-card fade-in" style="margin-bottom:2rem;">
+            <div class="art-number" style="font-size:1.4rem;">Choix des tests statistiques</div>
+            <p class="card-text">
+                Malgré un nombre limité de participants, les distributions des scores obtenus au <strong>Pré Test</strong>,
+                au <strong>Test 1</strong> et au <strong>Test 2</strong> suivent une loi normale. Cependant, compte tenu
+                de la faible taille de l'échantillon, nous avons privilégié l'utilisation de tests non paramétriques,
+                notamment des <strong>tests de Wilcoxon</strong>, afin de comparer les différentes conditions de manière plus robuste.
+            </p>
+        </div>
+
+        <!-- Tendances générales -->
+        <div class="art-card fade-in" style="margin-bottom:2rem;">
+            <div class="art-number" style="font-size:1.4rem;">Tendances générales observées</div>
+            <div class="card-text">
+                <p style="margin-bottom:1rem;">
+                    Les premiers résultats mettent en évidence une tendance nette : les scores obtenus au
+                    <strong>Pré Test</strong> sont globalement inférieurs à ceux observés aux <strong>Test 1</strong>
+                    et <strong>Test 2</strong>. Cette évolution suggère une augmentation de la fatigue ou de la charge
+                    cognitive ressentie après le début de la tâche d'écriture en BCI.
+                </p>
+
+                <p style="margin-bottom:1rem;">
+                    En revanche, la différence entre les scores du <strong>Test 1</strong> et du <strong>Test 2</strong>
+                    ne semble pas montrer d’évolution significative. De la même manière, la différence du nombre d'erreurs entre les différentes
+                    phases d'écriture ne semble pas montrer d'évolution significative.
+                </p>
+
+                <p>
+                    Ces résultats doivent toutefois être interprétés avec prudence en raison du nombre relativement faible
+                    de participants. Des tendances plus marquées pourraient apparaître avec un échantillon plus important
+                    et permettre de mieux caractériser l'effet de la fatigue sur la performance.
+                </p>
+            </div>
+        </div>
+
+        <!-- Résumé visuel des tendances -->
+        <div class="resultats-grid fade-in">
+            <div class="resultat-card">
+                <div class="resultat-value">Pré Test &lt; Test 1 / Test 2</div>
+                <div class="resultat-label">
+                    Les scores initiaux sont inférieurs aux scores mesurés après les phases d'écriture.
+                </div>
+            </div>
+
+            <div class="resultat-card">
+                <div class="resultat-value">Test 1 ≈ Test 2</div>
+                <div class="resultat-label">
+                    La différence entre les deux mesures post-écriture semble non significative.
+                </div>
+            </div>
+
+            <div class="resultat-card">
+                <div class="resultat-value">Erreurs stables</div>
+                <div class="resultat-label">
+                    Le nombre d'erreurs ne semble pas varier significativement entre les phases d'écriture.
+                </div>
+            </div>
+        </div>
+
+        <!-- Tendances entre modalités -->
+        <div class="art-card fade-in" style="margin-top:2rem; margin-bottom:2rem;">
+            <div class="art-number" style="font-size:1.4rem;">Tendances selon l'ordre des modalités</div>
+            <div class="card-text">
+                <p style="margin-bottom:1rem;">
+                    Une analyse exploratoire a également été menée selon l'ordre de présentation des blocs d'écriture.
+                    Deux modalités sont comparées : la modalité <strong>18_6</strong>, dans laquelle les participants
+                    commencent par le mot de 18 lettres, et la modalité <strong>6_18</strong>, dans laquelle ils commencent
+                    par les trois mots de 6 lettres.
+                </p>
+
+                <p style="margin-bottom:1rem;">
+                    Pour la modalité <strong>18_6</strong>, les scores semblent augmenter entre le
+                    <strong>Test 1</strong> et le <strong>Test 2</strong>, avec des médianes respectives de
+                    <strong>67</strong> et <strong>70</strong>. Cela pourrait traduire une augmentation progressive de
+                    la fatigue ou de la charge cognitive lorsque les participants commencent par le mot long.
+                </p>
+
+                <p style="margin-bottom:1rem;">
+                    À l'inverse, pour la modalité <strong>6_18</strong>, les scores semblent diminuer entre le
+                    <strong>Test 1</strong> et le <strong>Test 2</strong>, avec des médianes respectives de
+                    <strong>58</strong> et <strong>50</strong>. Commencer par les mots de 6 lettres pourrait donc avoir
+                    produit un effet d'entraînement ou d'adaptation. Les participants semblent mieux gérer la seconde
+                    phase, même lorsqu'elle implique ensuite le mot de 18 lettres.
+                </p>
+
+                <p>
+                    Cette observation reste néanmoins exploratoire. Les faibles effectifs ne permettent pas de conclure
+                    de manière certaine sur le sens de l'évolution des scores selon les modalités. Une collecte de données
+                    plus importante serait nécessaire pour confirmer ou infirmer cette tendance.
+                </p>
+                <div class="resultats-image-card fade-in">
+                    <img src="images/modalites.png" alt="Graphique des tendances selon les modalités 18_6 et 6_18">
+                </div>
+            </div>
+        </div>
+
+        <!-- Cartes modalités -->
+        <div class="resultats-grid fade-in">
+            <div class="resultat-card">
+                <div class="resultat-value">Modalité 18_6</div>
+                <div class="resultat-label">
+                    Début par le mot de 18 lettres : médiane Test 1 = 67, médiane Test 2 = 70.
+                    Tendance à une augmentation du score.
+                </div>
+            </div>
+
+            <div class="resultat-card">
+                <div class="resultat-value">Modalité 6_18</div>
+                <div class="resultat-label">
+                    Début par trois mots de 6 lettres : médiane Test 1 = 58, médiane Test 2 = 50.
+                    Tendance à une diminution du score.
+                </div>
+            </div>
+
+            <div class="resultat-card">
+                <div class="resultat-value">Interprétation prudente</div>
+                <div class="resultat-label">
+                    Les résultats suggèrent un possible effet d'adaptation, mais les effectifs restent insuffisants
+                    pour conclure définitivement.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
 
