@@ -2628,10 +2628,71 @@ textarea.form-input {
     color: #4285f4;
 }
 
+@media (max-width: 768px) {
+    .livrable-article-card {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .livrable-article-image {
+        flex: none;
+        max-width: 220px;
+    }
 
-
+    .article-download-btn {
+        justify-content: center;
+    }
+}
 
 .charges-card .art-number {
     margin-bottom: 1rem;
+}
+
+.livrable-article-card {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.2rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.livrable-article-image {
+    flex: 0 0 180px;
+    max-width: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.livrable-article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.livrable-article-content {
+    flex: 1;
+}
+
+.livrable-article-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.livrable-article-desc {
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.article-download-btn {
+    display: inline-flex;
+    width: auto;
+    margin-top: 0.5rem;
 }
