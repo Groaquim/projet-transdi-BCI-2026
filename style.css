@@ -42,7 +42,8 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2rem;
     align-items: center;
     height: 65px;
 }
@@ -72,7 +73,7 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 0.3rem;
+    gap: 2rem;
 }
 
 .nav-links a {
