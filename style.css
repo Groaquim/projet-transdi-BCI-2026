@@ -509,6 +509,26 @@ section {
     color: var(--text-dim);
 }
 
+/* ===== CORRECTION ESPACEMENTS ÉTAT DE L'ART ===== */
+.art-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+#art .art-card {
+    margin-bottom: 2rem;
+}
+
+#art .art-list .art-card {
+    margin-bottom: 0;
+}
+
+#art .nasa-container {
+    margin-top: 2.5rem;
+}
+
 /* ===== ÉTAT DE L'ART ===== */
 .art-grid {
     display: grid;
@@ -932,6 +952,26 @@ section {
     line-height: 1.6;
 }
 
+/* ===== CORRECTION ESPACEMENTS LIVRABLES ===== */
+.ressources-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+#ressources .card {
+    height: 100%;
+}
+
+#ressources .video-placeholder + .video-placeholder {
+    margin-top: 1.2rem;
+}
+
+#ressources .ressource-item {
+    margin-top: 1rem;
+}
+
 /* ===== RESSOURCES ===== */
 #ressources {
     background: var(--primary);
@@ -1265,6 +1305,11 @@ footer {
 
     .schema-arrow {
         transform: rotate(90deg);
+    }
+
+    .art-list,
+    .ressources-list {
+        grid-template-columns: 1fr;
     }
 }
 
