@@ -878,6 +878,12 @@ section {
     margin-bottom: 0.3rem;
 }
 
+.tutor-subtitle {
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
 .tutor-title {
     font-size: 0.85rem;
     color: var(--accent2);
@@ -1358,8 +1364,6 @@ footer {
     border-color: rgba(0, 212, 255, 0.3);
     transform: translateY(-3px);
 }
-
-
 
 .tutor-name {
     font-weight: 700;
@@ -1925,4 +1929,3 @@ textarea.form-input {
     width: auto;
     object-fit: contain;
 }
-
